@@ -1,15 +1,15 @@
 package routes
 
 import (
-	"net/http"
-
+	"github.com/gabriel_assis7/simple-go-mod/controllers"
 	"github.com/gorilla/mux"
 )
 
 func RegisterRouters(router *mux.Router) {
-	router.HandleFunc("/", HomeHandler).Methods("GET")
-}
-
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello world"))
+	router.HandleFunc("/", controllers.HomeHandler).Methods("GET")
+	router.HandleFunc("/tasks", controllers.CreateTask).Methods("POST")
+	router.HandleFunc("/tasks", controllers.GetTasks).Methods("GET")
+	router.HandleFunc("/tasks/{id}", controllers.GetTaskByID).Methods("GET")
+	router.HandleFunc("/tasks/{id}", controllers.UpdateTask).Methods("PUT")
+	router.HandleFunc("/tasks/{id}", controllers.DeleteTask).Methods("DELETE")
 }

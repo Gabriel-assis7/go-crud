@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS tasks (
 	id SERIAL PRIMARY KEY,
 	title TEXT NOT NULL,
 	description TEXT NOT NULL,
-	status BOOLEAN NOT NULL DEFAULT false
+	status BOOLEAN DEFAULT false
 );`
