@@ -1,0 +1,35 @@
+# Binaries and builds
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace stuff
+bin/
+build/
+dist/
+
+# Environment variables
+.env
+.env.*
+
+# Dependency directories (if using vendoring)
+vendor/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS and IDE-specific stuff
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Go modules
+go.sum
